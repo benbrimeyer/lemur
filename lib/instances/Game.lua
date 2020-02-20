@@ -3,6 +3,7 @@ local BaseInstance = import("./BaseInstance")
 local AnalyticsService = import("./AnalyticsService")
 local ContentProvider = import("./ContentProvider")
 local CoreGui = import("./CoreGui")
+local CollectionService = import("./CollectionService")
 local ContextActionService = import("./ContextActionService")
 local CorePackages = import("./CorePackages")
 local CreatorType = import("../Enum/CreatorType")
@@ -33,6 +34,7 @@ local Game = BaseInstance:extend("DataModel")
 
 function Game:init(instance)
 	AnalyticsService:new().Parent = instance
+	CollectionService:new().Parent = instance
 	ContentProvider:new().Parent = instance
 	CoreGui:new().Parent = instance
 	CorePackages:new().Parent = instance
